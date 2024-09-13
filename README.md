@@ -7,3 +7,9 @@ ssh into your Hetzner servers
 ```sh
 > pip install git+https://github.com/Tch1b0/sshz
 ```
+
+## usage
+
+```sh
+> sshz
+```

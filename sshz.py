@@ -7,6 +7,17 @@ import readchar
 tok_path = os.path.join(os.path.dirname(__file__), "token")
 toks: list[str] = []
 
+if not os.path.exists(tok_path):
+    print("Input your Hetzner project tokens:")
+    toks = []
+    tok = input()
+    while tok != "":
+        toks.append(tok)
+        tok = input()
+
+    with open(tok_path, "w") as f:
+        f.write("\n".join(toks))
+
 with open(tok_path, "r") as f:
     for tok in f.readlines():
         toks.append(tok.strip())
